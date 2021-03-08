@@ -1,0 +1,34 @@
+Project 3:
+
+Make sure all the dependencies are installed
+pip install pandas
+pip install numpy
+pip install math
+pip install sklearn
+pip install matplotlib
+pip install scipy
+pip install os
+
+Folder structure:
+   - ./Data - contains the data/csv files (training data and test data)
+   -  /Feature_Creation - has the files that need to be executed
+         ./train.py 
+         ./test.py 
+		 ./feature_function.py - this file has the functions that extracts the features. 
+		 
+         	 
+		 
+Steps to run:
+     1-> Place the training and testing data  in the Data folder. Currently the files are already present in the folder
+     2->Execute train.py by typing the following command in the command line by going into the Feature_Creation folder: python train.py 
+	 3->test.py --> execute the file to get the output/ : python test.py ./Data/test_csv_file --> test_csv_file can be replaced with the test file name and this will give the output classes of meal or no meal
+	 
+	 Alternatively, The project can be imported to Pycharm and then executed. 
+
+ 
+Development environment details:
+    - Operating System - windows
+    - Python version - 3.7.3
+    - Development IDE - PyCharm
+	
+** EXECUTION WILL TAKE AROUND 4 MINS FOR TRAINING
