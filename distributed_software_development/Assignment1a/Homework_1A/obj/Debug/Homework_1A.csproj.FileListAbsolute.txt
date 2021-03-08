@@ -1,0 +1,2 @@
+C:\Users\swarn\source\repos\Homework_1A\obj\Debug\Homework_1A.csprojAssemblyReference.cache
+C:\Users\swarn\source\repos\Homework_1A\obj\Debug\Homework_1A.csproj.CoreCompileInputs.cache

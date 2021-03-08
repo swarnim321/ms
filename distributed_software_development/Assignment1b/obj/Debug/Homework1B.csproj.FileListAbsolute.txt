@@ -1,0 +1,10 @@
+C:\Users\swarn\source\repos\Homework1B\bin\Debug\Homework1B.exe.config
+C:\Users\swarn\source\repos\Homework1B\bin\Debug\Homework1B.exe
+C:\Users\swarn\source\repos\Homework1B\bin\Debug\Homework1B.pdb
+C:\Users\swarn\source\repos\Homework1B\obj\Debug\Homework1B.Form1.resources
+C:\Users\swarn\source\repos\Homework1B\obj\Debug\Homework1B.Properties.Resources.resources
+C:\Users\swarn\source\repos\Homework1B\obj\Debug\Homework1B.csproj.GenerateResource.cache
+C:\Users\swarn\source\repos\Homework1B\obj\Debug\Homework1B.csproj.CoreCompileInputs.cache
+C:\Users\swarn\source\repos\Homework1B\obj\Debug\Homework1B.exe
+C:\Users\swarn\source\repos\Homework1B\obj\Debug\Homework1B.pdb
+C:\Users\swarn\source\repos\Homework1B\obj\Debug\Homework1B.csprojAssemblyReference.cache

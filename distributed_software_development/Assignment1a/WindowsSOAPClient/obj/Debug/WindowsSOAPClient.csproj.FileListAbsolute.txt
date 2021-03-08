@@ -1,0 +1,9 @@
+C:\Users\swarn\source\repos\WindowsSOAPClient\bin\Debug\WindowsSOAPClient.exe.config
+C:\Users\swarn\source\repos\WindowsSOAPClient\bin\Debug\WindowsSOAPClient.exe
+C:\Users\swarn\source\repos\WindowsSOAPClient\bin\Debug\WindowsSOAPClient.pdb
+C:\Users\swarn\source\repos\WindowsSOAPClient\obj\Debug\WindowsSOAPClient.Form1.resources
+C:\Users\swarn\source\repos\WindowsSOAPClient\obj\Debug\WindowsSOAPClient.Properties.Resources.resources
+C:\Users\swarn\source\repos\WindowsSOAPClient\obj\Debug\WindowsSOAPClient.csproj.GenerateResource.cache
+C:\Users\swarn\source\repos\WindowsSOAPClient\obj\Debug\WindowsSOAPClient.csproj.CoreCompileInputs.cache
+C:\Users\swarn\source\repos\WindowsSOAPClient\obj\Debug\WindowsSOAPClient.exe
+C:\Users\swarn\source\repos\WindowsSOAPClient\obj\Debug\WindowsSOAPClient.pdb
