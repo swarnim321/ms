@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <title> Login </title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   </head>
+
+   <body style="background-image: url('C:/Users/abhis/Desktop/CSE545/static/img/bg1.jpg');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;">
+
+    <!--{% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+          {% for category, message in messages %}
+              <div class="alert alert-dismissible alert-{{ category }}" role="alert">
+                  <span>{{ message }}</span>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+          {% endfor %}
+      {% endif %}
+      {% endwith %}-->
+
+     <div class="container">
+       <div class="row">
+         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+           <div class="card card-signin my-5">
+             <div class="card-body">
+               <h5 class="card-title text-center">Sign In</h5>
+
+               <form name="logform" id="logform" class="form-signin" method="post" onsubmit="return false">
+                 <div class="form-label-group">
+                   <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+                   <label for="username">Username</label>
+                 </div>
+
+                 <div class="form-label-group">
+                   <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+                   <label for="inputPassword">Password</label>
+                 </div>
+                   <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" id="login">Login</button>
+                  <!-- <br>
+                <div class = "form-label" style = "float:right">
+                 <font align = "right" color = "white"> Don't have an account? </font><a href = "file:///C:/Users/abhis/Desktop/CSE545/register.html"> <b> Register Here </b> </a></font> 
+               </div>-->
+               </form>
+			   <div  style="text-align:center;">
+<a href ="register.html"> Sign Up </a>
+</div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </body>
+
+   <script>
+    $(document).ready(function(){
+      $("#login").click(function(){
+        var uname = $("#username").val();
+        var pwd = $("#inputPassword").val();
+        const loginurl = 'https://eng-scene-273903.uc.r.appspot.com/login';
+        var role;
+       $.ajax({
+          url: loginurl,
+          method: 'POST',
+          headers: {  'Access-Control-Allow-Origin': '*' },
+          contentType: "application/json",
+          dataType: 'json',
+          data:JSON.stringify({'username': uname,
+                'password': pwd}),
+          success:function(response){
+            $('#logform').reset;
+			localStorage.setItem("name", response);
+
+            window.location.replace("Customer_Landing_Page.html");
+            },
+          error:function(response){
+            alert(JSON.stringify(response['responseJSON']));
+          }
+       });
+      });
+    });
+   </script>
+
+</html>

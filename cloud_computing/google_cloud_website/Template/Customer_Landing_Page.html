@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Merchant Dashboard</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/landing-page.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="jQKeyboard.js"></script>
+  <script type="text/javascript">
+    $(function(){
+                var keyboard = {
+                    'layout': [
+                        // alphanumeric keyboard type
+                        // text displayed on keyboard button, keyboard value, keycode, column span, new row
+                        [
+                            [
+                                ['`', '`', 192, 0, true], ['1', '1', 49, 0, false], ['2', '2', 50, 0, false], ['3', '3', 51, 0, false], ['4', '4', 52, 0, false], ['5', '5', 53, 0, false], ['6', '6', 54, 0, false], 
+                                ['7', '7', 55, 0, false], ['8', '8', 56, 0, false], ['9', '9', 57, 0, false], ['0', '0', 48, 0, false], ['-', '-', 189, 0, false], ['=', '=', 187, 0, false],
+                                ['q', 'q', 81, 0, true], ['w', 'w', 87, 0, false], ['e', 'e', 69, 0, false], ['r', 'r', 82, 0, false], ['t', 't', 84, 0, false], ['y', 'y', 89, 0, false], ['u', 'u', 85, 0, false], 
+                                ['i', 'i', 73, 0, false], ['o', 'o', 79, 0, false], ['p', 'p', 80, 0, false], ['[', '[', 219, 0, false], [']', ']', 221, 0, false], ['&#92;', '\\', 220, 0, false],
+                                ['a', 'a', 65, 0, true], ['s', 's', 83, 0, false], ['d', 'd', 68, 0, false], ['f', 'f', 70, 0, false], ['g', 'g', 71, 0, false], ['h', 'h', 72, 0, false], ['j', 'j', 74, 0, false], 
+                                ['k', 'k', 75, 0, false], ['l', 'l', 76, 0, false], [';', ';', 186, 0, false], ['&#39;', '\'', 222, 0, false], ['Enter', '13', 13, 3, false],
+                                ['Shift', '16', 16, 2, true], ['z', 'z', 90, 0, false], ['x', 'x', 88, 0, false], ['c', 'c', 67, 0, false], ['v', 'v', 86, 0, false], ['b', 'b', 66, 0, false], ['n', 'n', 78, 0, false], 
+                                ['m', 'm', 77, 0, false], [',', ',', 188, 0, false], ['.', '.', 190, 0, false], ['/', '/', 191, 0, false], ['Shift', '16', 16, 2, false],
+                                ['Bksp', '8', 8, 3, true], ['Space', '32', 32, 12, false], ['Clear', '46', 46, 3, false], ['Cancel', '27', 27, 3, false]
+                            ]
+                        ]
+                    ]
+                }
+                $('input.jQKeyboard').initKeypad({'keyboardLayout': keyboard});
+            });
+    </script>
+
+</head>
+
+<body>
+
+  <!--{% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+          {% for category, message in messages %}
+              <div class="alert alert-{{ category }} alert-dismissible" role="alert">
+                  <span>{{ message }}</span>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+          {% endfor %}
+      {% endif %}
+  {% endwith %}-->
+  
+   <!-- Grid row-->
+        <div class="col-md-12 bg-light d-flex">
+
+          <!-- Grid column -->
+          <div class="col-md-2 pt-3">
+            <h2 class="font-weight-bold" style = "font-family: 'Nanum Brush Script', cursive;">
+              <a href = "Customer_Landing_Page.html" style= "text-decoration: none;">InHouse Enterpreneur</a>
+            </h2>
+             
+          </div>
+          <!-- Grid column -->
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <!-- Grid column -->
+          <div class="col-md-2 pt-2" style= "float:right">
+            <a class="btn btn-primary text-uppercase mt-2" id="logout">Log out</a>
+          </div>
+          
+      </div>
+
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-lg-6">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <a href="#SelfTransfer" style = "text-decoration: none" onclick="order_food()">
+            <div class="features-icons-icon d-flex" id="selfdata">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>Order Food</h3>
+            
+            </a>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <a href="#ExtBankTransfer" style = "text-decoration: none" onclick="order_art()">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>Order Art</h3>
+           
+            </a>
+          </div>
+        </div>
+		<div class="col-lg-6">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <a href="#SameBankTransfer" style = "text-decoration: none" onclick="upload_food()">
+            <div class="features-icons-icon d-flex" id="inbank">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>Upload Food</h3>
+            
+            </a>
+          </div>
+        </div>
+        <!--<div class="container col-lg-4" id="otpvalidate">
+          <div class="card card-signin my-5">
+          <div class="card-body">
+          <h3>Validate OTP</h3>
+          <div class="form-group">
+            <label for="otp">OTP:</label><br>
+            <input type = "text" id = "otp" name = "otp" placeholder = "OTP" required autofocus><br><br>
+            <a href="#balotp"><button class="btn btn-success btn-md" id="validateotp">Validate OTP</button></a>
+          </div>
+          </div>
+          </div>
+        </div>-->
+        <div class="col-lg-6">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <a href="#openAcct" style = "text-decoration: none" onclick="upload_art()">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>Upload Art</h3>
+            
+            </a>
+          </div>
+        </div>
+        
+		
+		<div class="col-lg-6">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <a href="#ExtBankTransfer" style = "text-decoration: none" onclick="upload_food_history()">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>Upload Food History</h3>
+           
+            </a>
+          </div>
+        </div>
+		<div class="col-lg-6">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <a href="#ExtBankTransfer" style = "text-decoration: none" onclick="upload_art_history()">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>Upload Art History</h3>
+           
+            </a>
+          </div>
+        </div>
+		<div class="col-lg-12">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <a href="#ExtBankTransfer" style = "text-decoration: none" onclick="order_food_history()">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>Order History</h3>
+           
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <div class="container" id="crAcct" style="display:none">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+        <h3>Credit Money</h3>
+        <form class="form-signin" method="PUT" onsubmit="return false">
+        <div class="form-label-group">
+          <label for="ano" class="col-md-2">Account No:</label>
+          <input type="number" min="0" maxlength="10" name="ano" id="ano" class="col-md-4">
+        </div>          
+        <div class="form-label-group">
+          <label for="uno" class="col-md-2">Username:</label>
+          <input type="text" name="uno" id="uno" class="col-md-4">
+        </div>
+        <div class="form-label-group">
+          <label for="atype" class="col-md-2">Account Type:</label>
+          <select id="atype" name="atype" class="col-md-4">
+            <option disabled selected>--Select account type--</option>
+            <option value="checking">Checking</option>
+            <option value="savings">Savings</option>
+          </select>
+        </div>
+        <div class="form-label-group">
+          <label for="cramt" class="col-md-2">Credit Amount:</label>
+          <input type="number" min="0" name="cramt" id="cramt" class="col-md-4">
+        </div>
+        <button class="btn btn-success btn-xs col-md-2" id="crput">Request Account</button>
+        </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="dbAcct" style="display:none">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+        <h3>Debit Money</h3>
+        <form class="form-signin" method="PUT" onsubmit="return false">
+        <div class="form-label-group">
+          <label for="acno" class="col-md-2">Account No:</label>
+          <input type="number" min="0" maxlength="10" name="acno" id="acno" class="col-md-4">
+        </div>          
+        <div class="form-label-group">
+          <label for="ucno" class="col-md-2">Username:</label>
+          <input type="text" name="ucno" id="ucno" class="col-md-4">
+        </div>
+        <div class="form-label-group">
+          <label for="actype" class="col-md-2">Account Type:</label>
+          <select id="actype" name="actype" class="col-md-4">
+            <option disabled selected>--Select account type--</option>
+            <option value="checking">Checking</option>
+            <option value="savings">Savings</option>
+          </select>
+        </div>
+        <div class="form-label-group">
+          <label for="dbamt" class="col-md-2">Credit Amount:</label>
+          <input type="number" min="0" name="dbamt" id="dbamt" class="col-md-4">
+        </div>
+        <div class="form-label-group">
+          <label for="dbotp" class="col-md-2">OTP:</label>
+          <input type="number" min="0" name="dbotp" id="dbotp" class="jQKeyboard col-md-4">
+        </div>
+        <button class="btn btn-success btn-xs col-md-2" id="dbget">Send OTP</button>
+        <button class="btn btn-success btn-xs col-md-2" id="dbput">Request Account</button>
+        </form>
+        </div>
+      </div>
+    </div>
+
+      <div class="container" id="otpvalid" style="display:none">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+          <h3>Fetch OTP</h3>
+          <div class="form-group">
+            <label for="usernm" class="col-md-2">Username:</label>
+            <input type = "text" id = "usernm" name = "usernm" placeholder = "User name" required autofocus class="col-md-4"><br>
+            <label for="accno" class="col-md-2">Account No:</label>
+            <input type = "number" min="0" id = "accno" name="account no" required autofocus class="col-md-4"><br>
+            <label for="otp" class="col-md-2">OTP:</label>
+            <input type = "text" id = "otp" class="jQKeyboard col-md-4" name = "otp" placeholder = "OTP" required autofocus><br><br>
+            <button class="btn btn-success btn-xs col-md-2" id="fetchotp"><a href="#balotp">Send OTP</a></button>
+            <a href="#balotp"><button class="btn btn-success btn-md" id="validateotp">Validate OTP</button></a>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="container" id="SelfTransfer" style="display:none">
+        <div class="card card-signin my-5">
+        <div class="card-body">
+        <h3>Transfer Between Your Account</h3>
+        <div class="form-group">
+          <label class="col-md-2" for="AccountList">From:</label>
+          <input class="col-md-4" type="number" min="0" id="AccountList"  required autofocus><br>
+          <label class="col-md-2" for="TransferAccountList">To:</label>
+          <input type ="number" min="0" class="col-md-4" id="TransferAccountList" required autofocus><br>
+          <label class="col-md-2" for="SelfTransferAmount">Amount:</label>
+          <input type="number" min="0" class="col-md-4" name="SelfTransferAmount" id="SelfTransferAmount" placeholder="Enter Amount"><br><br>
+          <button class="btn btn-success btn-xs col-md-2" id="intrsf">Transfer</button>
+        </div>
+        </div>
+        </div>
+      </div>
+
+    <div class="container" id="SameBankTransfer" style="display:none">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+        <h3>Send Money</h3>
+        <div class="form-group">
+          <label class="col-md-2" for="SenderAccountList">From: </label>
+          <input type="number" min="0" class="col-md-4" id="SenderAccountList" required autofocus><br>
+          <label for="SameTransferTo" class="col-md-2">To: </label>
+          <input type="number" min="0" class="col-md-4" name="SameTransferTo" id="SameTransferTo" placeholder="Enter Account Number"><br>
+          <label for="SameTransferAmount" class="col-md-2">Amount:</label>
+          <input type="number" min="0" class="col-md-4" name="SameTransferAmount" id="SameTransferAmount" placeholder="Enter Amount"><br>
+          <button class="btn btn-success btn-xs col-md-2" id="sametrsf">Intiate Transfer</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="container" id="ExtBankTransfer" style="display:none">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+        <h3>Transfer to External Bank Account</h3>
+          <label for="ExtAccountList" class="col-md-2">From: </label>
+          <input type="number" min="0" class="col-md-4" id="ExtAccountList"><br>
+          <label for="ExtAccemail" class="col-md-2">To: </label>
+          <input type="email" class="col-md-4" name="ExtAccemail" id="ExtAccemail" placeholder="Enter Email Address"><br>
+          <label for="ExtTransferAmount" class="col-md-2">Amount:</label>
+          <input type="number" min="0" class="col-md-4" name="ExtTransferAmount" id="ExtTransferAmount" placeholder="Enter Amount"><br><br>
+          <button class="btn btn-success btn-xs col-md-2" id="exttrsf">Initiate Transfer</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="openAcct" style="display:none">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+        <h3>Open a New Account</h3>
+        <form class="form-signin" method="POST" onsubmit="return false">
+        <div class="form-label-group">
+          <label for="AccountType" class="col-md-2">Account Type:</label>
+          <select id="AccountType" name="AccountType" class="col-md-4">
+            <option disabled selected>--Select account type--</option>
+            <option value="checking">Checking</option>
+            <option value="savings">Savings</option>
+          </select>
+        </div>
+        <div class="form-label-group">
+          <label for="usrname" class="col-md-2">Username:</label>
+          <input type="text" name="usrname" id="usrname" class="col-md-4">
+        </div>
+        <button class="btn btn-success btn-xs col-md-2" id="reqacct">Request Account</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  
+  
+  function order_food() {
+    window.location.replace("getfood.html");
+  }
+  function upload_food(){
+   window.location.replace("upload_food.html");
+  }
+  function order_art() {
+    window.location.replace("getart.html");
+  }
+  function upload_art(){
+  var name = localStorage.getItem("name");
+
+   window.location.replace("upload_art.html");
+  }
+  function order_food_history() {
+    window.location.replace("order_history.html");
+  }
+  function order_art_history() {
+    window.location.replace("order_art_history.html");
+  }
+  function upload_food_history() {
+    window.location.replace("upload_food_history.html");
+  }
+  function upload_art_history() {
+    window.location.replace("upload_art_history.html");
+  }
+  function myFunction() {
+    var x = document.getElementById("pills-profile");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function otpview() {
+    var x = document.getElementById("otpvalid");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function myNewFunction() {
+    var x = document.getElementById("SelfTransfer");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function myNew2Function() {
+    var x = document.getElementById("SameBankTransfer");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function myNew3Function() {
+    var x = document.getElementById("ExtBankTransfer");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function creditblock() {
+    var x = document.getElementById("crAcct");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function debitblock() {
+    var x = document.getElementById("dbAcct");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function newAcct() {
+    var x = document.getElementById("openAcct");
+    if(x.style.display === "none") {
+      x.style.display = "block";
+    }
+    else {
+      x.style.display = "none";
+    }
+  }
+
+  $(document).ready(function(){
+    const mydetailurl = 'https://18.222.239.31/balance-statement/';
+    $("#fetchotp").click(function(){
+        var account_data = $("#usernm").val();
+        var account_no = $("#accno").val();
+		account_no=Number(account_no)
+        $.ajax({
+         url: mydetailurl + account_data,
+         headers: {  'Access-Control-Allow-Origin': '*' },
+         method: 'GET',
+         dataType: 'json',
+         contentType: "application/json",
+         data: JSON.stringify({'account_no': account_no}),
+         success: function(response){
+          alert(response);
+         },
+         error:function(response){
+          alert(JSON.stringify(response['responseJSON']));
+          alert('Invalid input please try again');
+         }
+      });
+    });
+  });
+
+  const internalcust = 'https://18.222.239.31/merch-trans/merchant-acct-trans/'; 
+  $(document).ready(function(){
+    $("#intrsf").click(function(){
+      var sender = $("#AccountList").val();
+      var receiver = $("#TransferAccountList").val();
+      var amount = $("#SelfTransferAmount").val();
+	  sender=Number(sender)
+	  receiver=Number(receiver)
+	  amount=Number(amount)
+      $.ajax({
+        url: internalcust,
+        headers: {  'Access-Control-Allow-Origin': '*' },
+        method: 'PUT',
+        dataType: 'json',
+        contentType: "application/json",
+        data: JSON.stringify({'sender': sender,
+                              'receiver': receiver,
+                              'amount' : amount}),
+        success: function(response){
+          alert('Transfer Done');
+        },
+        error: function(response){
+          alert(JSON.stringify(response['responseJSON']));
+          alert('Error while transferring funds please check account balance and try again');
+        }
+      });
+    });
+  });
+
+  $(document).ready(function(){
+    $("#sametrsf").click(function(){
+      var sender = $("#SenderAccountList").val();
+      var receiver = $("#SameTransferTo").val();
+      var amount = $("#SameTransferAmount").val();
+	  sender=Number(sender)
+	  receiver=Number(receiver)
+	  amount=Number(amount)
+      $.ajax({
+        url: internalcust,
+        headers: {  'Access-Control-Allow-Origin': '*' },
+        method: 'PUT',
+        dataType: 'json',
+        contentType: "application/json",
+        data: JSON.stringify({'sender': sender,
+                              'receiver': receiver,
+                              'amount' : amount}),
+        success: function(response){
+          alert('Transfer Done');
+        },
+        error: function(response){
+          alert(JSON.stringify(response['responseJSON']));
+          alert('Error while transferring funds please check account balance and try again');
+        }
+      });
+    });
+  });
+
+  $(document).ready(function(){
+    $("#exttrsf").click(function(){
+      var sender = $("#ExtAccountList").val();
+      var receiver = $("#ExtAccemail").val();
+      var amount = $("#ExtTransferAmount").val();
+	  sender=Number(sender)
+	  amount=Number(amount)
+      $.ajax({
+        url: 'https://18.222.239.31/merch-trans/merchant-ext-trans/',
+        headers: {  'Access-Control-Allow-Origin': '*' },
+        method: 'PUT',
+        dataType: 'json',
+        contentType: "application/json",
+        data: JSON.stringify({'sender': sender,
+                              'external': receiver,
+                              'amount' : amount}),
+        success: function(response){
+          alert('Transfer Done');
+        },
+        error: function(response){
+          alert(JSON.stringify(response['responseJSON']));
+          alert('Error while transferring funds please check account balance and try again');
+        }
+      });
+    });
+  });
+
+
+  const requrl = 'https://18.222.239.31/requests/newaccount/';
+  $(document).ready(function(){
+    $("#reqacct").click(function(){
+      var actiontype = $("#AccountType").val();
+      var username = $("#usrname").val();
+      $.ajax({
+          url: requrl,
+          headers: {  'Access-Control-Allow-Origin': '*' },
+          method:'POST',
+          contentType: "application/json",
+          dataType: 'json',
+          data: JSON.stringify({'status': "pending",
+                                'action': "new account",
+                                'action_type': actiontype,
+                                'role': 'tier2',
+                                'username': username}),
+          success:function(response){
+            alert('check issued');
+          },
+          error:function(response){
+           alert(JSON.stringify(response['responseJSON']));
+           alert(response);
+          }
+        });
+      });
+    });
+
+  const newotpurl = 'https://18.222.239.31/balance-statement/';
+  $(document).ready(function(){
+    $("#validateotp").click(function(){
+      var username = $("#usernm").val();
+      var account_no = $("#accno").val();
+      var otp = $("#otp").val();
+      $.ajax({
+          url: requrl + username,
+          headers: {  'Access-Control-Allow-Origin': '*' },
+          method:'POST',
+          contentType: "application/json",
+          dataType: 'json',
+          data: JSON.stringify({'account_no': account_no,
+                                'otp': otp}),
+          success:function(response){
+            alert(response);
+          },
+          error:function(response){
+           alert(JSON.stringify(response['responseJSON']));
+           alert('Please enter a valid otp');
+          }
+        });
+      });
+    });
+
+  $(document).ready(function(){
+    $("#crput").click(function(){
+      var accno = $("#ano").val();
+      var uname = $("#uno").val();
+      var acctype = $("#atype").val();
+      var amount = $("#cramt").val();
+    accno=Number(accno)
+    amount=Number(amount)
+      $.ajax({
+        url: 'https://18.222.239.31/merch-acct/user/merchant/credit/',
+        headers: {  'Access-Control-Allow-Origin': '*' },
+        method: 'PUT',
+        dataType: 'json',
+        contentType: "application/json",
+        data: JSON.stringify({'account_no': accno,
+                              'username': uname,
+                              'account_type': acctype,
+                              'credit_amount' : amount}),
+        success: function(response){
+          alert('Money Credited');
+        },
+        error: function(response){
+        alert(JSON.stringify(response));
+
+          alert('Error while transferring funds please check account balance and try again');
+        }
+      });
+    });
+  });
+
+  $(document).ready(function(){
+    const mydetailurl = 'https://18.222.239.31/merch-acct/user/merchant/debit/';
+    $("#dbget").click(function(){
+        var account_data = $("#ucno").val();
+        var account_no = $("#acno").val();
+    account_no=Number(account_no)
+        $.ajax({
+         url: mydetailurl + account_data,
+         headers: {  'Access-Control-Allow-Origin': '*' },
+         method: 'GET',
+         dataType: 'json',
+         contentType: "application/json",
+         data: JSON.stringify({'account_no': account_no}),
+         success: function(response){
+          alert(JSON.stringify(response));
+         },
+         error:function(response){
+          alert('Invalid input please try again');
+         }
+      });
+    });
+  });
+
+  $(document).ready(function(){
+    $("#dbput").click(function(){
+      var accno = $("#acno").val();
+      var uname = $("#ucno").val();
+      var acctype = $("#actype").val();
+      var amount = $("#dbamt").val();
+      var otp = $("#dbotp").val();
+    accno=Number(accno)
+    amount=Number(amount)
+    otp = Number(otp)
+      $.ajax({
+        url: 'https://18.222.239.31/merch-acct/user/merchant/debit/',
+        headers: {  'Access-Control-Allow-Origin': '*' },
+        method: 'PUT',
+        dataType: 'json',
+        contentType: "application/json",
+        data: JSON.stringify({'account_no': accno,
+                              'username': uname,
+                              'account_type': acctype,
+                              'debit_amount' : amount,
+                              'otp': otp}),
+        success: function(response){
+          alert('Money Debitted');
+        },
+        error: function(response){
+        alert(JSON.stringify(response));
+
+          alert('Error while transferring funds please check account balance and try again');
+        }
+      });
+    });
+  });
+
+  $(document).ready(function(){
+    $("#logout").click(function(){
+      window.location.replace("login.html");
+    });
+  });
+</script>
+
+</body>
+
+</html>

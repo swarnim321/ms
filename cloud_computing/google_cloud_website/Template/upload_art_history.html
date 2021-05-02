@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>List of available items</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	</head>
+
+	<body>		
+	<!-- Navigation -->
+        <!-- Grid row-->
+        <nav class="row bg-light sticky-top text-center d-flex justify-content-center mb-4">
+
+          <!-- Grid column -->
+          <div class="col-md-4 pt-3">
+            <h1 class="font-weight-bold" style = "font-family: 'Nanum Brush Script', cursive; float:left;">
+              <a href = "Customer_Landing_Page.html" style= "text-decoration: none;">Inhouse Enterpreneur</a>
+            </h1>
+             
+          </div>
+          <!-- Grid column -->
+         
+          <!-- Grid column -->
+          <div class="col-md-2 pt-4" style = "float:center;">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="Customer_Landing_Page.html" style= "text-decoration: none;">Home</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+          <!-- Grid column -->
+
+          <div class="col-md-2 pt-2" >
+            <a class="btn btn-primary text-uppercase mt-2" style= "float:right" id="logout">Log out</a>
+          </div>
+          
+      </nav>
+		
+		<div class = "container">
+			<div class = "well text-center">
+				<br>
+				<h1 class = "display-4">List of available items </h1>
+			</div>
+		</div> 
+
+		<br><br>
+
+
+		  <div class="tab-pane fade show active" id="t2transaction_pending" role="tabpanel" aria-labelledby="pills-profile-tab">
+		  	
+		  		<div class = "container">
+					<div class = "row">
+						<div class = "col md-12">
+							<br> <br>
+							<table class="table table-bordered text-center align-middle valign-center table-bordered" id="t2transaction_table">
+							  
+							</table>
+						</div>
+					</div>
+				</div>
+		  </div>
+		</div>
+
+		<script>
+		$(document).ready(function(){
+			const transactionurl = 'https://eng-scene-273903.uc.r.appspot.com/upload_art_history';
+			var user_id =JSON.parse(localStorage.getItem("name"))	
+			$.ajax({
+				url: transactionurl,
+         		headers: {  'Access-Control-Allow-Origin': '*' },
+         		method: 'POST',
+         		dataType: 'json',
+         		contentType: "application/json",
+				data: JSON.stringify({'type': 'art',
+				                        'user_id' : user_id
+									  }),
+         		success: function(response){
+          		var len = Object.keys(response).length;
+				console.log(len)
+				console.log(response[1]["cost"])
+          		$("#t2transaction_table").empty();
+          		$("#t2transaction_table").append('<thead>');
+          		$("#t2transaction_table").append('<tr>');
+          		$("#t2transaction_table").append('<th scope="col">image</th>');
+          		$("#t2transaction_table").append('<th scope="col">quantity_available</th>');
+          		$("#t2transaction_table").append('<th scope="col">address</th>');
+          		$("#t2transaction_table").append('<th scope="col">comment</th>');
+				$("#t2transaction_table").append('<th scope="col">weight</th>');
+          		$("#t2transaction_table").append('<th scope="col">size_of_art</th>');
+          		$("#t2transaction_table").append('<th scope="col">cost</th>');
+				
+				
+          		$("#t2transaction_table").append('</tr>');
+          		$("#t2transaction_table").append('</thead>');
+          		$("#t2transaction_table").append('<tbody');
+          		for(var i=1; i<len+1; i++){
+          			var image = response[i]["image"];
+          			var quantity = response[i]["quantity"];
+          			var address = response[i]["address"];
+          			var comment = response[i]["comment"];
+					var weight = response[i]["weight"];
+					var size_of_art = response[i]["size_of_art"];
+					var cost = response[i]["cost"];
+				console.log(quantity);	
+          			$("#t2transaction_table").append('<tr>');
+          			$("#t2transaction_table").append('<td><img src =" '+image+'" height ="100" width ="100"/></td>');
+          			$("#t2transaction_table").append('<td>'+quantity+'</td>');
+          			$("#t2transaction_table").append('<td>'+address+'</td>');
+					$("#t2transaction_table").append('<td>'+comment+'</td>');
+					$("#t2transaction_table").append('<td>'+weight+'</td>');
+					$("#t2transaction_table").append('<td>'+size_of_art+'</td>');
+					$("#t2transaction_table").append('<td>'+cost+'</td>');
+					
+          			$("#t2transaction_table").append('</tr>');
+
+          		}
+          		$("#t2transaction_table").append('</tbody>');
+          		},
+          		error:function(response){
+          			alert(JSON.stringify(response['responseJSON']));
+          		}
+			});
+		});
+
+		
+
+		function Denyt2(ele){
+			//var val = document.getElementById(clicked_id).value;
+			var val = ele.id;
+			$.ajax({
+				url: decisionurl,
+				headers: {  'Access-Control-Allow-Origin': '*' },
+				method: 'PUT',
+				dataType: 'json',
+				contentType: 'application/json',
+				data: JSON.stringify({'Status': 'declined',
+									  'Transaction_id': val}),
+				success: function(response){
+					var message = response['Status'];
+					if(message === "OK"){
+						alert('Transaction Declined');
+						window.location.replace("transactions_2.html");
+					}
+				},
+				error:function(response){
+					alert(JSON.stringify(response['responseJSON']));
+					alert('There was an issue declining that transaction please try again!');
+				}
+
+
+			});
+		}
+
+		$(document).ready(function(){
+    		$("#logout").click(function(){
+			window.location.replace("login.html");
+      			
+    		});
+  		});
+		</script>
+	</body>
+</html>

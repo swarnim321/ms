@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <title> Admin Registration </title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   </head>
+
+   <body >
+
+    <!--{% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+          {% for category, message in messages %}
+              <div class="alert alert-{{ category }} alert-dismissible" role="alert">
+                  <span>{{ message }}</span>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+          {% endfor %}
+      {% endif %}
+    {% endwith %}-->
+
+     <div class="container">
+       <div class="row">
+         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+           <div class="card card-signin my-5">
+             <div class="card-body">
+               <h5 class="card-title text-center">Register</h5>
+               
+               <form name="cmform" id="cmform" class="form-signin" method="put" onsubmit="return false">
+
+                <div class="form-label-group">
+                   <input type="text" id="fname" name = "fname" class="form-control" placeholder="First Name" required autofocus>
+                   <label for="fname">Name</label>
+                 </div>
+
+                 <div class="form-label-group">
+                   <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+                   <label for="email">Email address</label>
+                 </div>
+
+                 <div class="form-label-group">
+                   <input type="password" id="password" name="password" class="form-control" minlength="8" placeholder="Password" required autofocus>
+                   <label for="password">Password</label>
+                 </div>
+
+                 <div class="form-label-group">
+                   <input type="password" id="cpassword" name="cpassword" class="form-control" placeholder="Confirm Password">
+                   <label for="cpassword"> Confirm Password</label>
+                 </div>
+
+                 <div class="form-label-group">
+                   <input type="text" id="uname" name = "uname" class="form-control" placeholder="UserName">
+                   <label for="uname">User Name</label>
+                 </div>
+
+                 <div class="form-label-group">
+                   <input type="number" id="phnum" name = "phnum" class="form-control" min="0" minlength="10" placeholder="Phone Number" maxlength="10">
+                   <label for="phnum">Phone Number</label>
+                 </div>
+                  <div class="form-label-group">
+                   <input type="text" id="address" name = "address" class="form-control" min="0" minlength="1" placeholder="Addess" maxlength="1000">
+                   <label for="address">Address</label>
+                 </div>
+
+                 &nbsp;
+                
+                <br>
+                  
+                 <button class="btn btn-lg btn-primary btn-block text-uppercase" id = "register" type="submit">Register</button>
+                 <!--<br>
+                 <div class = "form-label" style = "float:right">
+                 <font align = "right" color = "white"> Already have an account? </font><a href = "file:///C:/Users/abhis/Desktop/CSE545/login.html"> <b> Login Here </b> </a></font> -->
+               </div>
+
+               </form>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </body>
+
+   <script>
+    $(document).ready(function() {
+      $("#register").on("click", function() {
+        var fname = $("#fname").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        var cpassword = $("#cpassword").val();
+        var uname = $("#uname").val();
+        var phnum = $("#phnum").val();
+        var address=$("#address").val();
+        
+        $.ajax({
+          url:'https://eng-scene-273903.uc.r.appspot.com/signup',
+            headers: {  'Access-Control-Allow-Origin': '*' },
+          method:'PUT',
+          contentType: "application/json",
+          dataType: 'json',
+          data: JSON.stringify({
+             
+                'email': email,
+                'password': password,
+                'username': uname,
+                'phone_no': phnum,
+                'name': fname,
+                'address': address
+                                }),
+          success:function(response){
+              $('#cmform').reset;
+              window.location.replace("login.html");
+          },
+          error:function(response){
+            alert("ERROR occurred , Retry");
+          }
+        });
+      });
+    });
+   </script>
+</html>
