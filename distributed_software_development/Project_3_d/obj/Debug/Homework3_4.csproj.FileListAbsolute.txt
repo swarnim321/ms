@@ -1,0 +1,10 @@
+D:\viusal_studio\Homework3_4\bin\Homework3_4.dll.config
+D:\viusal_studio\Homework3_4\bin\Homework3_4.dll
+D:\viusal_studio\Homework3_4\bin\Homework3_4.pdb
+D:\viusal_studio\Homework3_4\obj\Debug\Homework3_4.csprojAssemblyReference.cache
+D:\viusal_studio\Homework3_4\obj\Debug\Homework3_4.csproj.CoreCompileInputs.cache
+D:\viusal_studio\Homework3_4\obj\Debug\Homework3_4.dll
+D:\viusal_studio\Homework3_4\obj\Debug\Homework3_4.pdb
+D:\viusal_studio\Homework3_4\bin\Newtonsoft.Json.dll
+D:\viusal_studio\Homework3_4\bin\Newtonsoft.Json.xml
+D:\viusal_studio\Homework3_4\obj\Debug\Homework3_4.csproj.CopyComplete

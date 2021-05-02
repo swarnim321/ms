@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Restaurants>
+	<Restaurant Delivery ="Y">
+		<Name>restrnt1 </Name>
+		<Contact>
+			<Phone>123</Phone>
+			<Email>restrnt1@restrnt1.com</Email>
+		</Contact>
+		<Website facebook ="facebook/abc">http://www.restrnt1.com</Website>
+	</Restaurant>
+	<Restaurant Delivery ="Y">
+		<Name>restrnt2 </Name>
+		<Contact>
+			<Phone>456</Phone>
+			<Email>restrnt2@abc.com</Email>
+		</Contact>
+		<Website facebook ="facebook/abc">http://www.restrnt2.com</Website>
+	</Restaurant>
+	<Restaurant Delivery ="N">
+		<Name>restrnt3 </Name>
+		<Contact>
+			<Phone>789</Phone>
+			<Email>restrnt3@abc.com  </Email>
+		</Contact>
+		<Website>http://www.restrnt3.com</Website>
+	</Restaurant>
+	<Restaurant Delivery ="N">
+		<Name>restrnt4</Name>
+		<Contact>
+			<Phone>101112</Phone>
+			<Email>restrnt4@abc.com</Email>
+		</Contact>
+		<Website>http://www.restrnt4.com</Website>
+	</Restaurant>
+	<Restaurant Delivery ="Y">
+		<Name>restrnt5 </Name>
+		<Contact>
+			<Phone>131415</Phone>
+			<Email>restrnt5@abc.com</Email>
+		</Contact>
+		<Website facebook ="facebook/restrnt5">http://www.restrnt5.com</Website>
+	</Restaurant>
+</Restaurants>
