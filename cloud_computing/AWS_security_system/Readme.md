@@ -1,3 +1,1 @@
-
-	Developed a security system in Java using Darknet to detect motion through raspberry pi and process the captured video to detect the object and store results in synchronization with AWS.
-	Implemented autoscaling through programming (without using the AWS autoscaling policies) on AWS-EC2 to reduce the load on raspberry pi for processing and detecting the objects in the videos, hence optimizing the security system.
+It is  a security system in Java using Darknet to detect motion through raspberry pi and process the captured video to detect the object and store results in synchronization with AWS.Implements autoscaling through programming (without using the AWS autoscaling policies) on AWS-EC2 to reduce the load on raspberry pi for processing and detecting the objects in the videos.
